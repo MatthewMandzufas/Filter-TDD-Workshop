@@ -11,5 +11,14 @@ describe('filter', ()=>{
             filter(callBackFunction, arrayToFilter)
             expect(callBackFunction).toHaveBeenCalledTimes(numberOfItemsToFilter)
         })
+        it('invokes the callback function passing it an item from the array as a paramater', ()=>{
+            const callBackFunction = jest.fn()
+            const arrayToFilter = [5, 3, 4]
+
+            filter(callBackFunction, arrayToFilter);
+            expect(callBackFunction).nthCalledWith(1, 5)
+            expect(callBackFunction).nthCalledWith(2, 3)
+            expect(callBackFunction).nthCalledWith(3, 4)
+        })
     })
 })
