@@ -20,7 +20,13 @@ describe('filter', ()=>{
             expect(callBackFunction).nthCalledWith(2, 3)
             expect(callBackFunction).nthCalledWith(3, 4)
         })
-        it.todo('returns an array')
+        it('returns an array', ()=> {
+            const callbackFunction = jest.fn()
+            const arrayToFilter = [5, 3, 4]
+
+            const returnValue = filter(callbackFunction, arrayToFilter)
+            expect(returnValue).toBeInstanceOf(Array)
+        })
         it.todo('returns a new array')
         it.todo('returns an array of items for which the callback function is truthy')
     })
