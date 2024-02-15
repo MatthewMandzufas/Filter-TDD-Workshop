@@ -1,7 +1,7 @@
 
 function filter(callbackFunction, myArray){
-    for(let item in myArray){
-        callbackFunction()
+    for (let i = 0; i < myArray.length; i++){
+        callbackFunction(myArray[i]);
     }
 }
 

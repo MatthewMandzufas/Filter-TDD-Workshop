@@ -20,5 +20,8 @@ describe('filter', ()=>{
             expect(callBackFunction).nthCalledWith(2, 3)
             expect(callBackFunction).nthCalledWith(3, 4)
         })
+        it.todo('returns an array')
+        it.todo('returns a new array')
+        it.todo('returns an array of items for which the callback function is truthy')
     })
 })
